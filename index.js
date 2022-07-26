@@ -13,6 +13,14 @@ function rot13(encodedStr){
   let decodedArr = []; // Your Result goes here
   // Only change code below this line
   // your code here
+  for (let i = 0; i < codeArr.length; i++) {
+    if(codeArr[i] in lookup){
+      decodedArr.push(lookup[codeArr[i]]);
+    }
+    else{
+      decodedArr.push(codeArr[i]);
+    }
+  }
   // Only change code above this line
   return decodedArr.join(""); // Array to String
 }
